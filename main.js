@@ -85,37 +85,37 @@ const graph = [
 const start = 'A'
 const end = 'E'
 
-const getNextNode = (graph) => {
-
-  let nextNode = graph.find(node => !node.done)
-
-  for (node of graph) {
-
-    if (!node.done &&  node.value < nextNode.value) {
-
-      nextNode = node
-    }
-  }
-
-  return nextNode
-}
-
-const getNextEdge = (node) => {
-
-  let nextEdge = node.edges.find(edge => !edge.done)
-
-  for (edge of node.edges) {
-
-    if (!edge.done &&  edge.value < nextEdge.value) {
-
-      nextEdge = edge
-    }
-  }
-
-  return nextEdge
-}
-
 const dijcstra = (graph, start, end) => {
+
+  const getNextNode = (graph) => {
+
+    let nextNode = graph.find(node => !node.done)
+
+    for (node of graph) {
+
+      if (!node.done &&  node.value < nextNode.value) {
+
+        nextNode = node
+      }
+    }
+
+    return nextNode
+  }
+
+  const getNextEdge = (node) => {
+
+    let nextEdge = node.edges.find(edge => !edge.done)
+
+    for (edge of node.edges) {
+
+      if (!edge.done &&  edge.value < nextEdge.value) {
+
+        nextEdge = edge
+      }
+    }
+
+    return nextEdge
+  }
 
   for (node of graph) {
 
