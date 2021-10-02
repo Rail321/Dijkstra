@@ -84,3 +84,61 @@ const graph = [
 
 const start = 'A'
 const end = 'E'
+
+const findMin = nodes => {
+  
+  let min = nodes.find(node => !node.completed)
+
+  if (!min) {
+    return false
+  }
+
+  for (node of nodes) {
+
+    if (node.value < min.value && !node.completed) {
+      min = node
+    }
+  }
+    
+  return min
+}
+
+const getNode = name => {
+  return graph.find(node => node.name === name)
+}
+
+for (node of graph) {
+
+  node.completed = false
+  node.value = node.name === start ? 0 : Infinity
+
+  for (edge of node.edges) {
+    edge.completed = false
+  }
+}
+
+console.log(graph)
+
+let currentNode = findMin(graph)
+
+while (currentNode) {
+  
+  console.log(currentNode)
+
+  let currentEdge = findMin(currentNode.edges)
+
+  while (currentEdge) {
+
+    getNode(currentEdge.name).value = currentNode.value + currentEdge.value
+    currentEdge.completed = true
+
+    console.log(currentEdge)
+
+    currentEdge = findMin(currentNode.edges)
+  }
+
+  currentNode.completed = true
+  currentNode = findMin(graph)
+
+  console.log(graph)
+}
