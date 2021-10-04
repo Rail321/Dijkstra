@@ -20,3 +20,4 @@ graph.setEdge('D', 'E', 12)
 console.log(graph)
 
 console.log(dijcstra(graph.nodes, 'A', 'E'))
+

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.hero {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 100%;
+}
+
+.col {
+  flex: 1 1 50%;
+  height: 100%;
+}
+
+.canvas {
+  background-color: #000;
+  height: 100%;
+}
