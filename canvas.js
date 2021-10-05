@@ -43,7 +43,7 @@ canvas.addEventListener('click', (event) => {
     radius,
   })
 
-  document.querySelector('.col-m').innerHTML += `<pre>${JSON.stringify(nodes[nodes.length - 1], 2, true)}</pre>`
+  addItem(nodes[nodes.length - 1])
 })
 
 loop()

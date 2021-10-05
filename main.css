@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -13,7 +14,10 @@ canvas {
 }
 
 .container {
+  width: 100%;
+  max-width: 1400px;
   height: 100%;
+  margin: 0 auto;
 }
 
 .hero {
@@ -33,7 +37,81 @@ canvas {
   height: 100%;
 }
 
+.col-max {
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.col-min {
+  flex-grow: 0;
+  flex-basis: auto;
+}
+
+.col-4 {
+  flex-basis: 33.33%;
+}
+
+.col-8 {
+  flex-basis: 66.66%;
+}
+
+.col-inner {
+  height: 100%;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.px-1 {
+  padding: 0 10px;
+}
+
+.mn-1 {
+  margin: -10px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mbn-1 {
+  margin-bottom: -10px;
+}
+
+.br-1 {
+  border-radius: 10px;
+}
+
+.brt-1 {
+  border-radius: 10px 10px 0 0;
+}
+
+.brb-1 {
+  border-radius: 0 0 10px 10px;
+}
+
+.border {
+  border: 1px solid #666;
+}
+
+.border-x {
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #666;
+}
+
+.bg-gray {
+  background-color: #999;
+}
+
+.clr-white {
+  color: #fff;
+}
+
 .canvas {
-  background-color: #000;
   height: 100%;
 }

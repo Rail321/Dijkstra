@@ -1,23 +1,8 @@
-const graph = new Graph()
+const nodeList = document.querySelector('#nodeList')
 
-graph.addNode('A')
-graph.addNode('B')
-graph.addNode('C')
-graph.addNode('D')
-graph.addNode('E')
+nodeList.innerHTML = ''
 
-graph.setEdge('A', 'B', 3)
-graph.setEdge('A', 'C', 6)
-graph.setEdge('A', 'D', 1)
+const addItem = (node) => {
 
-graph.setEdge('B', 'E', 8)
-
-graph.setEdge('C', 'D', 4)
-graph.setEdge('C', 'E', 4)
-
-graph.setEdge('D', 'E', 12)
-
-console.log(graph)
-
-console.log(dijcstra(graph.nodes, 'A', 'E'))
-
+  nodeList.innerHTML += `<div class="mb-1"><div class="p-1 brt-1 border bg-gray"><div class="row"><div class="col col-max">${JSON.stringify(node, 2, true)}</div><div class="col col-min row"><div class="col px-1"> <img class="" src="./icons/chevron-down.svg" alt="&#9747"></div><div class="col px-1"> <img class="" src="./icons/x-lg.svg" alt="&#10095"></div></div></div></div><div class="p-1 brb-1 border-bottom border-x"><div class="mbn-1"><div class="p-1 br-1 border bg-gray mb-1"><div class="row"><div class="col col-max"> B</div><div class="col col-min"><div class="px-1"> <img class="" src="./icons/x-lg.svg" alt="&#10095"></div></div></div></div></div></div></div></div>`
+}

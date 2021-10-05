@@ -2,37 +2,132 @@
 
 <html lang="ru">
 
-  <head>
+<head>
+  
+  <title>Алгоритм Дейкстры</title>
+  
+  <link href="./main.css" rel="stylesheet">
+  
+  <script src="./Graph.js" defer></script>
+  <script src="./dijkstra.js" defer></script>
+  <script src="./main.js" defer></script>
+  <script src="./canvas.js" defer></script>
+</head>
 
-    <title>Алгоритм Дейкстры</title>
-
-    <link href="./main.css" rel="stylesheet">
+<body>
+  
+  <div class="hero">
     
-    <script src="./Graph.js" defer></script>
-    <script src="./dijkstra.js" defer></script>
-    <script src="./main.js" defer></script>
-    <script src="./canvas.js" defer></script>
-  </head>
-
-  <body>
-    
-    <div class="hero">
+    <div class="container p-1">
       
-      <div class="container">
-
-        <h1>Алгоритм Дейкстры</h1>
-
-        <div class="row">
-
-          <div class="col">
-            <canvas id="canvas" class="canvas"></canvas>
+      <div class="row mn-1">
+        
+        <div class="col col-8 p-1">
+          
+          <div class="col-inner">
+            
+            <canvas id="canvas" class="canvas br-1 bg-gray border"></canvas>
           </div>
-
-          <div class="col col-m">
-            <p>Управление</p>
+        </div>
+        
+        <div class="col col-4 p-1">
+          
+          <div class="col-inner">
+            
+            <div class="p-1 brt-1 border bg-gray">
+              
+              <div class="row">
+                
+                <div class="col col-max">
+                  Graph
+                </div>
+                
+                <div class="col col-min row">
+                  
+                  <div class="col px-1">
+                    <img class="" src="./icons/chevron-down.svg" alt="&#9747">
+                  </div>
+                  
+                  <div class="col px-1">
+                    <img class="" src="./icons/x-lg.svg" alt="&#10095">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-1 brb-1 border-bottom border-x">
+              
+              <div id="nodeList" class="mbn-1">
+                
+                <div class="mb-1">
+                
+                  <div class="p-1 brt-1 border bg-gray">
+                
+                    <div class="row">
+                      
+                      <div class="col col-max">
+                        A
+                      </div>
+                      
+                      <div class="col col-min row">
+                        
+                        <div class="col px-1">
+                          <img class="" src="./icons/chevron-down.svg" alt="&#9747">
+                        </div>
+                        
+                        <div class="col px-1">
+                          <img class="" src="./icons/x-lg.svg" alt="&#10095">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="p-1 brb-1 border-bottom border-x">
+                    
+                    <div class="mbn-1">
+                      
+                      <div class="p-1 br-1 border bg-gray mb-1">
+                
+                        <div class="row">
+                          
+                          <div class="col col-max">
+                            B
+                          </div>
+                          
+                          <div class="col col-min">
+                            
+                            <div class="px-1">
+                              <img class="" src="./icons/x-lg.svg" alt="&#10095">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="p-1 br-1 border bg-gray mb-1">
+                
+                        <div class="row">
+                          
+                          <div class="col col-max">
+                            C
+                          </div>
+                          
+                          <div class="col col-min">
+                            
+                            <div class="px-1">
+                              <img class="" src="./icons/x-lg.svg" alt="&#10095">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
